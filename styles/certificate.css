@@ -1,0 +1,122 @@
+/* General page styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+
+.navbar {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure navbar stays above other content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    color: #00FF00; /* Linux terminal green */
+}
+
+.navbar a.active {
+    font-weight: bold;
+}
+
+/* Certifications container */
+.certifications-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.certifications-container h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.certification-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    transition: transform 0.2s ease;
+}
+
+.certification-card:hover {
+    transform: scale(1.02);
+    background-color: #2a2a2a;
+}
+
+.certification-card h2 {
+    font-size: 24px;
+    color: #00FF00;
+    margin-bottom: 10px;
+}
+
+.certification-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #00FF00;
+}
+
+.footer i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .certifications-container {
+        padding: 10px;
+    }
+
+    .certification-card {
+        padding: 15px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    .certifications-container h1 {
+        font-size: 28px;
+    }
+}

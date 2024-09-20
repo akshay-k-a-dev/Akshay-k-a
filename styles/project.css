@@ -1,0 +1,174 @@
+/* Global styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212; /* Dark background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: black; /* Match home page background color */
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure navbar stays above other content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: color 0.3s, text-shadow 0.3s; /* Added transition for glow effect */
+}
+
+.navbar a:hover {
+    color: #00FF00; /* Linux terminal green */
+    text-shadow: 0 0 10px #00FF00; /* Glow effect */
+}
+
+.navbar a.active {
+    font-weight: bold;
+}
+
+/* Projects Container */
+.projects-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-container h1 {
+    font-size: 3rem; /* Main heading size */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.projects-container ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.projects-container li {
+    background-color: #1e1e1e; /* Dark card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.2s, background-color 0.3s; /* Added transition for hover effect */
+}
+
+.projects-container li:hover {
+    transform: scale(1.05); /* Slight scale up on hover */
+    background-color: #2a2a2a; /* Darker background on hover */
+}
+
+.projects-container li strong {
+    font-size: 1.5rem;
+    color: #00FF00; /* Highlight project name with Linux terminal green */
+}
+
+.projects-container p {
+    margin: 10px 0;
+    color: #ccc; /* Light gray for descriptions */
+}
+
+.projects-container a {
+    color: #00FF00; /* Link color matching the hover effect */
+    text-decoration: none;
+}
+
+.projects-container a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.footer a:hover {
+    color: #00FF00; /* Linux terminal green */
+}
+
+.footer p {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.footer i {
+    font-size: 1.8rem; /* Increase size of social icons */
+}
+
+/* Loader */
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20%;
+}
+
+.show-loader {
+    display: flex;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust header size for smaller screens */
+    }
+
+    .projects-container h1 {
+        font-size: 2.5rem; /* Adjust project header size */
+    }
+
+    .projects-container li {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .footer a {
+        font-size: 1.2rem; /* Adjust footer link size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Further reduce header size for mobile */
+    }
+
+    .projects-container li {
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .footer a {
+        font-size: 1.2rem; /* Adjust footer link size for mobile */
+    }
+}

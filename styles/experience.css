@@ -1,0 +1,132 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212; /* Dark background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: black; /* Match home page background color */
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure navbar stays above other content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: color 0.3s, text-shadow 0.3s; /* Added transition for glow effect */
+}
+
+.navbar a:hover {
+    color: #00FF00; /* Linux terminal green */
+    text-shadow: 0 0 10px #00FF00; /* Glow effect */
+}
+
+.navbar a.active {
+    font-weight: bold;
+}
+
+/* Experience Page Container */
+.experience-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(23, 17, 17);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.experience-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00FF00;
+}
+
+.experience-container h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.experience-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.experience-container li {
+    background-color:#FFFDD0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 4px solid #4CAF50;
+    font-size: 18px;
+    color: #555;
+}
+
+.experience-container li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color:black;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.footer a:hover {
+    color: #00FF00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .experience-container {
+        padding: 15px;
+    }
+
+    .experience-container h1 {
+        font-size: 28px;
+    }
+
+    .experience-container h2 {
+        font-size: 22px;
+    }
+
+    .experience-container li {
+        font-size: 16px;
+    }
+}

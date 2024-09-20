@@ -1,0 +1,169 @@
+/* Global styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure navbar stays above other content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    color: #00FF00; /* Linux terminal green */
+}
+
+.navbar a.active {
+    font-weight: bold;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Create space between text and image */
+    align-items: center; /* Vertically center the content */
+    padding: 0 2rem;
+    min-height: 90vh;
+    position: relative;
+}
+
+.hero-section img {
+    width: 400px; /* Increased the size */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure image fits without distortion */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.typing-container {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.typing {
+    display: inline-block;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+.about-text {
+    font-family: 'Courier New', Courier, monospace; /* Replace with the correct font family */
+    font-size: 1.2rem; /* Adjust the size as needed */
+    line-height: 1.5; /* Optional: Adjust line height for readability */
+    margin: 2px 0; /* Optional: Add margin for spacing */
+    color: white; /* Ensure the text is visible against the background */
+}
+
+/* Footer */
+.footer {
+    position: relative; /* Changed from fixed to relative */
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.footer a:hover {
+    color: #00FF00; /* Linux terminal green */
+}
+
+.footer p {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.footer i {
+    font-size: 1.8rem; /* Increase size of social icons */
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20%;
+}
+
+.show-loader {
+    display: flex;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Stack text and image vertically on small screens */
+        padding: 1rem;
+    }
+
+    .hero-section img {
+        width: 250px; /* Reduce image size for smaller screens */
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .typing-container {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section img {
+        width: 200px; /* Further reduce image size for mobile */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .typing-container {
+        font-size: 1rem;
+    }
+}
